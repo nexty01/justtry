@@ -1,6 +1,7 @@
 {
-  "name": "bestfriend-gift",
+  "name": "friendship-app",
   "version": "1.0.0",
+  "description": "Bestfriend website hosted on Heroku",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
