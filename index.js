@@ -1,17 +1,18 @@
 const express = require("express");
 const path = require("path");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files (images, css, js, etc.)
-app.use(express.static(path.join(__dirname)));
+// Public folder ko static serve karo
+app.use(express.static(path.join(__dirname, "public")));
 
-// Main route → serve friendship.html
+// Root pe friendship.html serve karo
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "friendship.html"));
+  res.sendFile(path.join(__dirname, "public", "friendship.html"));
 });
 
-// Start server
+// Server start
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
